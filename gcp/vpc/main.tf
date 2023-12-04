@@ -49,3 +49,21 @@ resource "aws_subnet" "hs_terraform_test_private_2c" {
     Terraform = "true"
   }
 }
+
+resource "aws_internet_gateway" "hs_terraform_test_igw" {
+  vpc_id     = aws_vpc.hs_terraform_test_vpc.id
+
+  tags = {
+    Name = "hs_terraform_test_igw"
+    Terraform = "true"
+  }
+}
+
+resource "aws_route_table" "hs_terraform_test_rtt" {
+  vpc_id     = aws_vpc.hs_terraform_test_vpc.id
+
+  tags = {
+    Name = "hs_terraform_test_rtt"
+    Terraform = "true"
+  }
+}

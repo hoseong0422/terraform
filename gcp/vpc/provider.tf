@@ -1,5 +1,4 @@
 provider "aws" {
-  access_key = access_key
-  secret_key = secret_key
-  region = "ap-northeast-2"
+  profile = "Profile Name"
+  region = "Region Name"
 }
